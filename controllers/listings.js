@@ -1,7 +1,10 @@
 const Listing = require("../models/listing");
-const mbxGeocoding = require("@mapbox/mapbox-sdk/services/Geocoding");
+const mbxGeocoding = require("@mapbox/mapbox-sdk/services/geocoding");
 const mapToken = process.env.MAP_TOKEN;
-const geocodingClient = mbxGeocoding({ accessToken: mapToken });
+
+const geocodingClient = mbxGeocoding({
+  accessToken: mapToken,
+});
 
 module.exports.renderNewForm = (req, res) => {
   res.render("listings/new.ejs");
