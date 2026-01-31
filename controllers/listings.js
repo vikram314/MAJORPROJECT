@@ -98,7 +98,7 @@ module.exports.index = async (req, res) => {
   }
 
   if (category) {
-    filter.categories = category.toLowerCase();
+    filter.categories = { $in: [category.toLowerCase()] };
   }
 
   const allListings = await Listing.find(filter);
