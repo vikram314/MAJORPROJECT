@@ -1,0 +1,57 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="auth-container">
+  <h2>Sign Up on Wanderlust</h2>
+
+  <form
+    action="/signup"
+    method="POST"
+    class="auth-form needs-validation"
+    novalidate
+  >
+    <div>
+      <label for="username" class="form-label">Username</label>
+      <input
+        name="username"
+        type="text"
+        placeholder="Enter Username"
+        id="validationCustom01"
+        class="form-control"
+        required
+      />
+      <div class="invalid-feedback">Please enter username.</div>
+      <div class="valid-feedback"><b>Looks good Username!</b></div>
+    </div>
+
+    <div>
+      <label for="email" class="form-label">E-mail</label>
+      <input
+        name="email"
+        type="email"
+        placeholder="Enter E-mail"
+        id="validationCustom02"
+        class="form-control"
+        required
+      />
+      <div class="invalid-feedback">Please enter a valid email.</div>
+    </div>
+
+    <div>
+      <label for="password" class="form-label">Password</label>
+      <input
+        name="password"
+        type="password"
+        placeholder="Enter Password"
+        id="validationCustom03"
+        class="form-control"
+        minlength="8"
+        required
+      />
+      <div class="invalid-feedback">
+        Please enter a strong password (min 8 chars).
+      </div>
+    </div>
+
+    <button type="submit" class="auth-submit mt-3">Sign Up</button>
+  </form>
+</div>
