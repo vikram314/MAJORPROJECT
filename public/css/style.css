@@ -28,6 +28,22 @@ main {
   margin-top: 1.5rem; /* sirf spacing */
   padding-top: 1rem;
 }
+.navbar {
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar a,
+.navbar-brand {
+  color: #222 !important;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: #ff385c !important; /* Airbnb-style pink */
+}
 
 /* Footer links */
 .f-info-links a {
